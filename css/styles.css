@@ -1,0 +1,266 @@
+/* =========================================================
+   harder then ever
+   Palette
+   Black knit   #0A0A0A
+   Charcoal     #141414
+   Thread white #EDEDED
+   Soft grey    #9A9A9A
+   Line grey    #2A2A2A
+   ========================================================= */
+
+html { box-sizing: border-box; scroll-behavior: smooth; }
+*, *::before, *::after { box-sizing: inherit; }
+
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #C8C8C8;
+    background-color: #0A0A0A;
+    /* knit rib texture */
+    background-image:
+        repeating-linear-gradient(90deg,
+            rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px,
+            rgba(0,0,0,0) 1px, rgba(0,0,0,0) 4px,
+            rgba(0,0,0,0.35) 4px, rgba(0,0,0,0.35) 5px,
+            rgba(0,0,0,0) 5px, rgba(0,0,0,0) 8px);
+}
+
+h1, h2, h3 {
+    font-family: 'Exo 2', Arial, sans-serif;
+    font-weight: 300;
+    color: #EDEDED;
+    margin-top: 0;
+}
+
+a { color: #EDEDED; }
+
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 70px 50px;
+    overflow: hidden;
+}
+
+.column-narrow {
+    width: 30%;
+    float: left;
+    padding-right: 3%;
+    min-height: 120px;
+}
+
+.column-wide {
+    width: 70%;
+    float: left;
+}
+
+/* wide-tracked lowercase titles, like the embroidery */
+.section-title {
+    font-size: 1.1em;
+    font-weight: 300;
+    text-transform: lowercase;
+    letter-spacing: 0.45em;
+    color: #EDEDED;
+    margin-bottom: 40px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #2A2A2A;
+}
+
+
+/* ---------- Navigation ---------- */
+.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 10, 0.88);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #1E1E1E;
+}
+
+.main-nav .nav-wrap {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 4px 12px;
+    font-family: 'Exo 2', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 0.85em;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+    color: #9A9A9A;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover { color: #FFFFFF; }
+
+.main-nav .nav-brand {
+    color: #EDEDED;
+    letter-spacing: 0.5em;
+    padding-left: 0;
+}
+
+.main-nav .nav-resume {
+    border: 1px solid #EDEDED;
+    color: #EDEDED;
+    margin-left: 6px;
+}
+
+
+/* ---------- Hero ---------- */
+.hero {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.phoenix {
+    display: block;
+    width: 340px;
+    max-width: 75%;
+    margin: 0 auto 30px;
+    /* fade the photo edges into the page */
+    -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 62%, transparent 100%);
+            mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 62%, transparent 100%);
+}
+
+header h1 {
+    font-size: 2.1em;
+    font-weight: 200;
+    letter-spacing: 0.55em;
+    margin: 0 0 10px;
+    padding-left: 0.55em;   /* balances the trailing letter-spacing */
+    text-transform: lowercase;
+}
+
+.date {
+    font-family: 'Exo 2', Arial, sans-serif;
+    letter-spacing: 0.4em;
+    font-size: 0.8em;
+    color: #8A8A8A;
+    margin: 0 0 60px;
+}
+
+.intro {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.intro h2 {
+    font-size: 1em;
+    letter-spacing: 0.45em;
+    color: #9A9A9A;
+    margin-bottom: 14px;
+}
+
+
+/* ---------- Work ---------- */
+.job {
+    overflow: hidden;
+    padding: 28px 0;
+    border-bottom: 1px solid #1E1E1E;
+}
+
+.job:last-child { border-bottom: none; }
+
+.job h3 {
+    font-size: 1.15em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 6px;
+}
+
+.job .column-narrow p { margin: 2px 0; }
+
+.dates {
+    font-family: 'Exo 2', Arial, sans-serif;
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+    color: #7A7A7A;
+}
+
+.column-wide p:first-child { margin-top: 0; }
+
+ul {
+    padding-left: 18px;
+    list-style: none;
+}
+
+ul li { position: relative; margin-bottom: 4px; }
+
+ul li::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 0.85em;
+    width: 8px;
+    height: 1px;
+    background: #9A9A9A;
+}
+
+
+/* ---------- Education (background image + RGBA gradient) ---------- */
+.education-section {
+    background-color: #111111;
+    background-image:
+        linear-gradient(rgba(10, 10, 10, 0.92), rgba(10, 10, 10, 0.78)),
+        url("../images/phoenix.jpg");
+    background-size: cover;
+    background-position: center 30%;
+    border-top: 1px solid #1E1E1E;
+    border-bottom: 1px solid #1E1E1E;
+}
+
+.education-section h3 {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+
+/* ---------- Footer ---------- */
+footer { text-align: center; }
+
+footer .section-title {
+    border-bottom: none;
+    padding-left: 0.45em;
+}
+
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Exo 2', Arial, sans-serif;
+    font-size: 0.85em;
+    letter-spacing: 0.25em;
+    color: #9A9A9A;
+    transition: color 0.2s;
+}
+
+.contact-info a:hover { color: #FFFFFF; }
+.contact-info i { margin-right: 6px; }
+
+.copyright {
+    margin-top: 40px;
+    font-family: 'Exo 2', Arial, sans-serif;
+    font-size: 0.75em;
+    letter-spacing: 0.35em;
+    color: #5A5A5A;
+}
+
+
+/* ---------- Small screens ---------- */
+@media (max-width: 700px) {
+    .content-wrap { padding: 50px 22px; }
+    .column-narrow, .column-wide { width: 100%; float: none; min-height: 0; }
+    header h1 { font-size: 1.4em; letter-spacing: 0.35em; }
+    .main-nav .nav-wrap { justify-content: center; }
+}
